@@ -12,13 +12,13 @@ public class Hand
      * 例: [0, 2, 0, 2, 2, 1, 1, 1, 4] -> 69510160
      * (00|000|100|001|001|001|010|010|000|010|000) 牌9 牌8 牌7 牌6 牌5 牌4 牌3 牌2 牌1
      */
-    public uint Manzu { get; set; } = 0;
+    public uint Characters { get; set; } = 0;
 
-    public uint Pinzu { get; set; } = 0;
+    public uint Dots { get; set; } = 0;
 
-    public uint Sozu { get; set; } = 0;
+    public uint Bamboos { get; set; } = 0;
 
-    public uint ZiHai { get; set; } = 0;
+    public uint Honors { get; set; } = 0;
 
     // TODO: 副露
 
@@ -37,14 +37,14 @@ public class Hand
     {
         foreach (var tile in tiles)
         {
-            if (tile <= (int)TileType.Manzu9)
-                Manzu += Bit.Tile1[tile];
-            else if (tile <= (int)TileType.Pinzu9)
-                Pinzu += Bit.Tile1[tile];
-            else if (tile <= (int)TileType.Sozu9)
-                Sozu += Bit.Tile1[tile];
+            if (tile <= (int)TileType.Character9)
+                Characters += Bit.Tile1[tile];
+            else if (tile <= (int)TileType.Dot9)
+                Dots += Bit.Tile1[tile];
+            else if (tile <= (int)TileType.Bamboo9)
+                Bamboos += Bit.Tile1[tile];
             else
-                ZiHai += Bit.Tile1[tile];
+                Honors += Bit.Tile1[tile];
         }
     }
 }

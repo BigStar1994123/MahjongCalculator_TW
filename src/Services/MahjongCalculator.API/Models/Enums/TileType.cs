@@ -7,172 +7,172 @@ public enum TileType
     /// <summary>
     /// 一萬
     /// </summary>
-    Manzu1,
+    Character1,
 
     /// <summary>
     /// 二萬
     /// </summary>
-    Manzu2,
+    Character2,
 
     /// <summary>
     /// 三萬
     /// </summary>
-    Manzu3,
+    Character3,
 
     /// <summary>
     /// 四萬
     /// </summary>
-    Manzu4,
+    Character4,
 
     /// <summary>
     /// 五萬
     /// </summary>
-    Manzu5,
+    Character5,
 
     /// <summary>
     /// 六萬
     /// </summary>
-    Manzu6,
+    Character6,
 
     /// <summary>
     /// 七萬
     /// </summary>
-    Manzu7,
+    Character7,
 
     /// <summary>
     /// 八萬
     /// </summary>
-    Manzu8,
+    Character8,
 
     /// <summary>
     /// 九萬
     /// </summary>
-    Manzu9,
+    Character9,
 
     /// <summary>
     /// 一筒
     /// </summary>
-    Pinzu1,
+    Dot1,
 
     /// <summary>
     /// 二筒
     /// </summary>
-    Pinzu2,
+    Dot2,
 
     /// <summary>
     /// 三筒
     /// </summary>
-    Pinzu3,
+    Dot3,
 
     /// <summary>
     /// 四筒
     /// </summary>
-    Pinzu4,
+    Dot4,
 
     /// <summary>
     /// 五筒
     /// </summary>
-    Pinzu5,
+    Dot5,
 
     /// <summary>
     /// 六筒
     /// </summary>
-    Pinzu6,
+    Dot6,
 
     /// <summary>
     /// 七筒
     /// </summary>
-    Pinzu7,
+    Dot7,
 
     /// <summary>
     /// 八筒
     /// </summary>
-    Pinzu8,
+    Dot8,
 
     /// <summary>
     /// 九筒
     /// </summary>
-    Pinzu9,
+    Dot9,
 
     /// <summary>
     /// 一條
     /// </summary>
-    Sozu1,
+    Bamboo1,
 
     /// <summary>
     /// 二條
     /// </summary>
-    Sozu2,
+    Bamboo2,
 
     /// <summary>
     /// 三條
     /// </summary>
-    Sozu3,
+    Bamboo3,
 
     /// <summary>
     /// 四條
     /// </summary>
-    Sozu4,
+    Bamboo4,
 
     /// <summary>
     /// 五條
     /// </summary>
-    Sozu5,
+    Bamboo5,
 
     /// <summary>
     /// 六條
     /// </summary>
-    Sozu6,
+    Bamboo6,
 
     /// <summary>
     /// 七條
     /// </summary>
-    Sozu7,
+    Bamboo7,
 
     /// <summary>
     /// 八條
     /// </summary>
-    Sozu8,
+    Bamboo8,
 
     /// <summary>
     /// 九條
     /// </summary>
-    Sozu9,
+    Bamboo9,
 
     /// <summary>
     /// 東風
     /// </summary>
-    Ton,
+    EastWind,
 
     /// <summary>
     /// 南風
     /// </summary>
-    Nan,
+    SouthWind,
 
     /// <summary>
     /// 西風
     /// </summary>
-    Sya,
+    WestWind,
 
     /// <summary>
     /// 北風
     /// </summary>
-    Pe,
+    NorthWind,
 
     /// <summary>
     /// 白皮
     /// </summary>
-    Haku,
+    WhiteDragon,
 
     /// <summary>
     /// 發財
     /// </summary>
-    Hatu,
+    GreenDragon,
 
     /// <summary>
     /// 紅中
     /// </summary>
-    Tyun,
+    RedDragon,
 
     Length
 }
