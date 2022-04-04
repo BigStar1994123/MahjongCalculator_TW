@@ -30,37 +30,57 @@ public class Tile
         { TileType.Dot7, "七筒" },
         { TileType.Dot8, "八筒" },
         { TileType.Dot9, "九筒" },
-        { TileType.Bamboo1, "一索" },
-        { TileType.Bamboo2, "二索" },
-        { TileType.Bamboo3, "三索" },
-        { TileType.Bamboo4, "四索" },
-        { TileType.Bamboo5, "五索" },
-        { TileType.Bamboo6, "六索" },
-        { TileType.Bamboo7, "七索" },
-        { TileType.Bamboo8, "八索" },
-        { TileType.Bamboo9, "九索" },
+        { TileType.Stick1, "一索" },
+        { TileType.Stick2, "二索" },
+        { TileType.Stick3, "三索" },
+        { TileType.Stick4, "四索" },
+        { TileType.Stick5, "五索" },
+        { TileType.Stick6, "六索" },
+        { TileType.Stick7, "七索" },
+        { TileType.Stick8, "八索" },
+        { TileType.Stick9, "九索" },
         { TileType.EastWind, "東" },
         { TileType.SouthWind, "南" },
         { TileType.WestWind, "西" },
         { TileType.NorthWind, "北" },
         { TileType.WhiteDragon, "白" },
         { TileType.GreenDragon, "發" },
-        { TileType.RedDragon, "中" }
+        { TileType.RedDragon, "中" },
+        { TileType.Plum, "梅" },
+        { TileType.Orchid, "蘭" },
+        { TileType.Bamboo, "竹" },
+        { TileType.Chrysanthemum, "菊" },
+        { TileType.Sprint, "春" },
+        { TileType.Summor, "夏" },
+        { TileType.Fall, "秋" },
+        { TileType.Winter, "東" }
     };
 
+    /// <summary>
+    /// 是否為萬牌
+    /// </summary>
+    /// <returns></returns>
     public bool IsCharacter()
     {
-        return TileType.Character1 <= this.Value && this.Value <= TileType.Character9;
+        return this.Value >= TileType.Character1 && this.Value <= TileType.Character9;
     }
 
+    /// <summary>
+    /// 是否為筒牌
+    /// </summary>
+    /// <returns></returns>
     public bool IsDot()
     {
-        return TileType.Dot1 <= this.Value && this.Value <= TileType.Dot9;
+        return this.Value >= TileType.Dot1 && this.Value <= TileType.Dot9;
     }
 
-    public bool IsBamboo()
+    /// <summary>
+    /// 是否為條牌
+    /// </summary>
+    /// <returns></returns>
+    public bool IsStick()
     {
-        return TileType.Bamboo1 <= this.Value && this.Value <= TileType.Bamboo9;
+        return this.Value >= TileType.Stick1 && this.Value <= TileType.Stick9;
     }
 
     /// <summary>
@@ -69,7 +89,7 @@ public class Tile
     /// <returns></returns>
     public bool IsNumber()
     {
-        return this.Value < TileType.EastWind || this.Value > TileType.RedDragon;
+        return this.Value < TileType.EastWind && this.Value != TileType.Null;
     }
 
     /// <summary>
@@ -78,6 +98,15 @@ public class Tile
     /// <returns></returns>
     public bool IsHonor()
     {
-        return TileType.EastWind <= this.Value && this.Value <= TileType.RedDragon;
+        return this.Value >= TileType.EastWind && this.Value <= TileType.RedDragon;
+    }
+
+    /// <summary>
+    /// 是否為花牌
+    /// </summary>
+    /// <returns></returns>
+    public bool IsFlowerSeason()
+    {
+        return this.Value >= TileType.Plum && this.Value <= TileType.Winter;
     }
 }

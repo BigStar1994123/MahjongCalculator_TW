@@ -97,47 +97,47 @@ public enum TileType
     /// <summary>
     /// 一條
     /// </summary>
-    Bamboo1,
+    Stick1,
 
     /// <summary>
     /// 二條
     /// </summary>
-    Bamboo2,
+    Stick2,
 
     /// <summary>
     /// 三條
     /// </summary>
-    Bamboo3,
+    Stick3,
 
     /// <summary>
     /// 四條
     /// </summary>
-    Bamboo4,
+    Stick4,
 
     /// <summary>
     /// 五條
     /// </summary>
-    Bamboo5,
+    Stick5,
 
     /// <summary>
     /// 六條
     /// </summary>
-    Bamboo6,
+    Stick6,
 
     /// <summary>
     /// 七條
     /// </summary>
-    Bamboo7,
+    Stick7,
 
     /// <summary>
     /// 八條
     /// </summary>
-    Bamboo8,
+    Stick8,
 
     /// <summary>
     /// 九條
     /// </summary>
-    Bamboo9,
+    Stick9,
 
     /// <summary>
     /// 東風
@@ -173,6 +173,46 @@ public enum TileType
     /// 紅中
     /// </summary>
     RedDragon,
+
+    /// <summary>
+    /// 梅
+    /// </summary>
+    Plum,
+
+    /// <summary>
+    /// 蘭
+    /// </summary>
+    Orchid,
+
+    /// <summary>
+    /// 竹
+    /// </summary>
+    Bamboo,
+
+    /// <summary>
+    /// 菊
+    /// </summary>
+    Chrysanthemum,
+
+    /// <summary>
+    /// 春
+    /// </summary>
+    Sprint,
+
+    /// <summary>
+    /// 夏
+    /// </summary>
+    Summor,
+
+    /// <summary>
+    /// 秋
+    /// </summary>
+    Fall,
+
+    /// <summary>
+    /// 冬
+    /// </summary>
+    Winter,
 
     Length
 }
