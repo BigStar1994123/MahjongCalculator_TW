@@ -1,4 +1,4 @@
-﻿namespace TaiwaneseMahjongCalculator.src.Utils;
+﻿namespace MahjongCalculator_TW.src.Utils;
 
 public static class Bit
 {

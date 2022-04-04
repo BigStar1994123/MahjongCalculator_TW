@@ -1,7 +1,7 @@
-﻿using TaiwaneseMahjongCalculator.src.Models.Enums;
-using TaiwaneseMahjongCalculator.src.Utils;
+﻿using MahjongCalculator_TW.src.Models.Enums;
+using MahjongCalculator_TW.src.Utils;
 
-namespace TaiwaneseMahjongCalculator.src.Models;
+namespace MahjongCalculator_TW.src.Models;
 
 public class Hand
 {

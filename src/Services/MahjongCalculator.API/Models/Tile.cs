@@ -1,6 +1,6 @@
-﻿using TaiwaneseMahjongCalculator.src.Models.Enums;
+﻿using MahjongCalculator_TW.src.Models.Enums;
 
-namespace TaiwaneseMahjongCalculator.src.Models;
+namespace MahjongCalculator_TW.src.Models;
 
 /// <summary>
 /// 牌面

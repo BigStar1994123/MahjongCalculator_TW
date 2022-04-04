@@ -1,4 +1,4 @@
-﻿namespace TaiwaneseMahjongCalculator.src.Models.Enums;
+﻿namespace MahjongCalculator_TW.src.Models.Enums;
 
 public enum TileType
 {
