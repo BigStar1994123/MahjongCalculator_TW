@@ -25,7 +25,7 @@ public class RequiredTileTableGenerator
             if (i == _n_keys)
             {
                 if (cnt <= 14)
-                    Keys.Add(key);
+                    Keys.Add(key.ToList());
                 return;
             }
 
@@ -66,10 +66,14 @@ public class RequiredTileTableGenerator
 
         public List<int> CalcPair(List<int> _key)
         {
+            System.Diagnostics.Debug.WriteLine("This is start of CalcPair() method.");
+
             var key = new List<int>(_key);
 
             _maxPair = _maxMentu = _maxKouho = 0;
             cut_mentu(key);
+
+            System.Diagnostics.Debug.WriteLine($"This is start of CalcPair() method. _maxMentu:{_maxMentu} _maxKouho:{_maxKouho}");
 
             return new List<int> { _maxMentu, _maxKouho };
         }
@@ -83,10 +87,10 @@ public class RequiredTileTableGenerator
 
             foreach (var n in key)
             {
-                n_ge1 += n >= 1 ? n : 0;
-                n_ge2 += n >= 2 ? n : 0;
-                n_ge3 += n >= 3 ? n : 0;
-                n_ge4 += n >= 4 ? n : 0;
+                n_ge1 += n >= 1 ? 1 : 0;
+                n_ge2 += n >= 2 ? 1 : 0;
+                n_ge3 += n >= 3 ? 1 : 0;
+                n_ge4 += n >= 4 ? 1 : 0;
             }
 
             return new List<int> { n_ge1, n_ge2, n_ge3, n_ge4 };
@@ -172,6 +176,7 @@ public class RequiredTileTableGenerator
 
     public void Execute()
     {
+        System.Diagnostics.Debug.WriteLine("Test");
         Product product = new Product();
         Generator gen = new Generator();
 
@@ -179,9 +184,16 @@ public class RequiredTileTableGenerator
             // 数牌のテーブルを作成する。
             var keys = product.Generate(9);
 
-            using StreamWriter file = new("WriteLines2.txt", append: true);
-            //std::ofstream file(R"(F:\work\mahjong-cpp\data\config\syupai_table.txt)",
-            //               std::ios_base::binary | std::ios_base::out);
+            using StreamWriter file = new("csharp_gen9.txt", append: true);
+
+            //foreach (var key in keys)
+            //{
+            //    foreach (var t in key)
+            //    {
+            //        file.Write(t);
+            //    }
+            //    file.WriteLine();
+            //}
 
             foreach (var key in keys)
             {

@@ -42,15 +42,20 @@ std::vector<int> SyantenTableGenerator::calc_pair_with_head(const std::vector<in
 
 std::vector<int> SyantenTableGenerator::calc_pair(const std::vector<int> &_key)
 {
+    //std::cout << "this is start of calc_pair() method." << "\n";
+
     std::vector<int> key = _key;
     max_pair = max_mentu = max_kouho = 0;
     cut_mentu(key);
 
-    return {max_mentu, max_kouho};
+    //std::cout << "this is end of calc_pair() method. max_mentu:" << max_mentu << " max_kouho:" << max_kouho << "\n";
+    return {max_mentu, max_kouho};   
 }
 
 void SyantenTableGenerator::cut_mentu(std::vector<int> &key, int n_mentu, int n_kouho, int i)
 {
+    //std::cout << "this is cut_mentu() method with n_mentu:" << n_mentu << " n_kouho:" << n_kouho << " i:" << i << "\n";
+
     if (i == key.size()) {
         cut_kouho(key, n_mentu, n_kouho);
         return;
@@ -77,6 +82,8 @@ void SyantenTableGenerator::cut_mentu(std::vector<int> &key, int n_mentu, int n_
 
 void SyantenTableGenerator::cut_kouho(std::vector<int> &key, int n_mentu, int n_kouho, int i)
 {
+    //std::cout << "this is cut_kouho() method with n_mentu:" << n_mentu << " n_kouho:" << n_kouho << " i:" << i << "\n";
+
     if (i == key.size()) {
         aggregate(n_mentu, n_kouho);
         return;
@@ -109,6 +116,7 @@ void SyantenTableGenerator::cut_kouho(std::vector<int> &key, int n_mentu, int n_
 
 void SyantenTableGenerator::aggregate(int n_mentu, int n_kouho)
 {
+    //std::cout << "this is aggregate() method with n_mentu:" << n_mentu << " n_kouho:" << n_kouho << "\n";
     int pair = n_mentu * 2 + n_kouho;
 
     if (pair > max_pair || (pair == max_pair && n_mentu > max_mentu)) {
@@ -152,11 +160,11 @@ class Product
   private:
     void product(std::vector<int> &key, int i = 0, int cnt = 0)
     {
-        for (auto v : key)
-        {       
-            std::cout << v << ",";
-        }
-        std::cout << "\n";
+        // for (auto v : key)
+        // {       
+        //     std::cout << v << ",";
+        // }
+        // std::cout << "\n";
 
         if (i == n_keys_) {
             if (cnt <= 14)
@@ -184,44 +192,22 @@ int main()
 
         // 数牌のテーブルを作成する。
         std::vector<std::vector<int>> keys = product.generate(9);
-        std::ofstream file("aaa.txt",
+        std::ofstream file("cplusplus_gen9.txt",
                            std::ios_base::binary | std::ios_base::out);
 
         // for (auto v : keys)
         // {       
         //     for (auto t : v)
         //     {
-        //         std::cout << t << ",";
+        //         file << t;
+
+        //         // std::cout << t << ",";
         //     }
 
-        //     std::cout << "\n";
-        // }
-        // for (const auto &key : keys) {
-        //     auto v1 = gen.calc_pair(key);
-        //     auto v2 = gen.calc_pair_with_head(key);
-        //     auto v3 = gen.count(key);
-
-        //     // ファイルに出力する。
-        //     for (size_t i = 0; i < 9; ++i) {
-        //         file << (i < key.size() ? key[i] : 0);
-        //     }
-        //     file << " ";
-
-        //     for (auto x : v1)
-        //         file << x;
-        //     for (auto x : v2)
-        //         file << x;
-        //     for (auto x : v3)
-        //         file << x;
         //     file << "\n";
+        //     // std::cout << "\n";
         // }
-    }
 
-    {
-        // 字牌のテーブルを作成する。
-        std::vector<std::vector<int>> keys = product.generate(7);
-        std::ofstream file("bbb.txt",
-                           std::ios_base::binary | std::ios_base::out);
         for (const auto &key : keys) {
             auto v1 = gen.calc_pair(key);
             auto v2 = gen.calc_pair_with_head(key);
@@ -242,4 +228,30 @@ int main()
             file << "\n";
         }
     }
+
+    // {
+    //     // 字牌のテーブルを作成する。
+    //     std::vector<std::vector<int>> keys = product.generate(7);
+    //     std::ofstream file("bbb.txt",
+    //                        std::ios_base::binary | std::ios_base::out);
+    //     for (const auto &key : keys) {
+    //         auto v1 = gen.calc_pair(key);
+    //         auto v2 = gen.calc_pair_with_head(key);
+    //         auto v3 = gen.count(key);
+
+    //         // ファイルに出力する。
+    //         for (size_t i = 0; i < 9; ++i) {
+    //             file << (i < key.size() ? key[i] : 0);
+    //         }
+    //         file << " ";
+
+    //         for (auto x : v1)
+    //             file << x;
+    //         for (auto x : v2)
+    //             file << x;
+    //         for (auto x : v3)
+    //             file << x;
+    //         file << "\n";
+    //     }
+    // }
 }
