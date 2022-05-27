@@ -229,29 +229,29 @@ int main()
         }
     }
 
-    // {
-    //     // 字牌のテーブルを作成する。
-    //     std::vector<std::vector<int>> keys = product.generate(7);
-    //     std::ofstream file("bbb.txt",
-    //                        std::ios_base::binary | std::ios_base::out);
-    //     for (const auto &key : keys) {
-    //         auto v1 = gen.calc_pair(key);
-    //         auto v2 = gen.calc_pair_with_head(key);
-    //         auto v3 = gen.count(key);
+    {
+        // 字牌のテーブルを作成する。
+        std::vector<std::vector<int>> keys = product.generate(7);
+        std::ofstream file("cplusplus_gen7.txt",
+                           std::ios_base::binary | std::ios_base::out);
+        for (const auto &key : keys) {
+            auto v1 = gen.calc_pair(key);
+            auto v2 = gen.calc_pair_with_head(key);
+            auto v3 = gen.count(key);
 
-    //         // ファイルに出力する。
-    //         for (size_t i = 0; i < 9; ++i) {
-    //             file << (i < key.size() ? key[i] : 0);
-    //         }
-    //         file << " ";
+            // ファイルに出力する。
+            for (size_t i = 0; i < 9; ++i) {
+                file << (i < key.size() ? key[i] : 0);
+            }
+            file << " ";
 
-    //         for (auto x : v1)
-    //             file << x;
-    //         for (auto x : v2)
-    //             file << x;
-    //         for (auto x : v3)
-    //             file << x;
-    //         file << "\n";
-    //     }
-    // }
+            for (auto x : v1)
+                file << x;
+            for (auto x : v2)
+                file << x;
+            for (auto x : v3)
+                file << x;
+            file << "\n";
+        }
+    }
 }

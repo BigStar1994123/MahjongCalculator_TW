@@ -54,7 +54,7 @@ public class RequiredTileTableGenerator
                 if (key[i] >= 2)
                 {
                     key[i] -= 2;
-                    cut_mentu(key);
+                    Cut_mentu(key);
                     key[i] += 2;
 
                     head = 1;
@@ -71,7 +71,7 @@ public class RequiredTileTableGenerator
             var key = new List<int>(_key);
 
             _maxPair = _maxMentu = _maxKouho = 0;
-            cut_mentu(key);
+            Cut_mentu(key);
 
             System.Diagnostics.Debug.WriteLine($"This is start of CalcPair() method. _maxMentu:{_maxMentu} _maxKouho:{_maxKouho}");
 
@@ -96,18 +96,18 @@ public class RequiredTileTableGenerator
             return new List<int> { n_ge1, n_ge2, n_ge3, n_ge4 };
         }
 
-        private void cut_mentu(List<int> key, int n_mentu = 0, int n_kouho = 0, int i = 0)
+        private void Cut_mentu(List<int> key, int n_mentu = 0, int n_kouho = 0, int i = 0)
         {
             if (i == key.Count)
             {
-                cut_kouho(key, n_mentu, n_kouho);
+                Cut_kouho(key, n_mentu, n_kouho);
                 return;
             }
 
             if (key[i] >= 3)
             {
                 key[i] -= 3;
-                cut_mentu(key, n_mentu + 1, n_kouho, i);
+                Cut_mentu(key, n_mentu + 1, n_kouho, i);
                 key[i] += 3;
             }
 
@@ -116,27 +116,27 @@ public class RequiredTileTableGenerator
                 key[i] -= 1;
                 key[i + 1] -= 1;
                 key[i + 2] -= 1;
-                cut_mentu(key, n_mentu + 1, n_kouho, i);
+                Cut_mentu(key, n_mentu + 1, n_kouho, i);
                 key[i] += 1;
                 key[i + 1] += 1;
                 key[i + 2] += 1;
             }
 
-            cut_mentu(key, n_mentu, n_kouho, i + 1);
+            Cut_mentu(key, n_mentu, n_kouho, i + 1);
         }
 
-        private void cut_kouho(List<int> key, int n_mentu, int n_kouho, int i = 0)
+        private void Cut_kouho(List<int> key, int n_mentu, int n_kouho, int i = 0)
         {
             if (i == key.Count)
             {
-                aggregate(n_mentu, n_kouho);
+                Aggregate(n_mentu, n_kouho);
                 return;
             }
 
             if (key[i] >= 2)
             {
                 key[i] -= 2;
-                cut_kouho(key, n_mentu, n_kouho + 1, i);
+                Cut_kouho(key, n_mentu, n_kouho + 1, i);
                 key[i] += 2;
             }
 
@@ -144,7 +144,7 @@ public class RequiredTileTableGenerator
             {
                 key[i] -= 1;
                 key[i + 1] -= 1;
-                cut_kouho(key, n_mentu, n_kouho + 1, i);
+                Cut_kouho(key, n_mentu, n_kouho + 1, i);
                 key[i] += 1;
                 key[i + 1] += 1;
             }
@@ -153,15 +153,15 @@ public class RequiredTileTableGenerator
             {
                 key[i] -= 1;
                 key[i + 2] -= 1;
-                cut_kouho(key, n_mentu, n_kouho + 1, i);
+                Cut_kouho(key, n_mentu, n_kouho + 1, i);
                 key[i] += 1;
                 key[i + 2] += 1;
             }
 
-            cut_kouho(key, n_mentu, n_kouho, i + 1);
+            Cut_kouho(key, n_mentu, n_kouho, i + 1);
         }
 
-        private void aggregate(int n_mentu, int n_kouho)
+        private void Aggregate(int n_mentu, int n_kouho)
         {
             int pair = n_mentu * 2 + n_kouho;
 
@@ -176,7 +176,6 @@ public class RequiredTileTableGenerator
 
     public void Execute()
     {
-        System.Diagnostics.Debug.WriteLine("Test");
         Product product = new Product();
         Generator gen = new Generator();
 
@@ -186,14 +185,35 @@ public class RequiredTileTableGenerator
 
             using StreamWriter file = new("csharp_gen9.txt", append: true);
 
-            //foreach (var key in keys)
-            //{
-            //    foreach (var t in key)
-            //    {
-            //        file.Write(t);
-            //    }
-            //    file.WriteLine();
-            //}
+            foreach (var key in keys)
+            {
+                var v1 = gen.CalcPair(key);
+                var v2 = gen.CalcPairWithHead(key);
+                var v3 = gen.Count(key);
+
+                for (var i = 0; i < 9; i++)
+                    file.Write(i < key.Count ? key[i] : 0);
+
+                file.Write(" ");
+
+                foreach (var x in v1)
+                    file.Write(x);
+
+                foreach (var x in v2)
+                    file.Write(x);
+
+                foreach (var x in v3)
+                    file.Write(x);
+
+                file.WriteLine();
+            }
+        }
+
+        {
+            // 字牌のテーブルを作成する。
+            var keys = product.Generate(7);
+
+            using StreamWriter file = new("csharp_gen7.txt", append: true);
 
             foreach (var key in keys)
             {
@@ -202,23 +222,19 @@ public class RequiredTileTableGenerator
                 var v3 = gen.Count(key);
 
                 for (var i = 0; i < 9; i++)
-                {
                     file.Write(i < key.Count ? key[i] : 0);
-                }
+
                 file.Write(" ");
 
                 foreach (var x in v1)
-                {
                     file.Write(x);
-                }
+
                 foreach (var x in v2)
-                {
                     file.Write(x);
-                }
+
                 foreach (var x in v3)
-                {
                     file.Write(x);
-                }
+
                 file.WriteLine();
             }
         }
