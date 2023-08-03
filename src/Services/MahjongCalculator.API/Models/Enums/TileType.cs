@@ -97,47 +97,47 @@ public enum TileType
     /// <summary>
     /// 一條
     /// </summary>
-    Stick1,
+    Bamboo1,
 
     /// <summary>
     /// 二條
     /// </summary>
-    Stick2,
+    Bamboo2,
 
     /// <summary>
     /// 三條
     /// </summary>
-    Stick3,
+    Bamboo3,
 
     /// <summary>
     /// 四條
     /// </summary>
-    Stick4,
+    Bamboo4,
 
     /// <summary>
     /// 五條
     /// </summary>
-    Stick5,
+    Bamboo5,
 
     /// <summary>
     /// 六條
     /// </summary>
-    Stick6,
+    Bamboo6,
 
     /// <summary>
     /// 七條
     /// </summary>
-    Stick7,
+    Bamboo7,
 
     /// <summary>
     /// 八條
     /// </summary>
-    Stick8,
+    Bamboo8,
 
     /// <summary>
     /// 九條
     /// </summary>
-    Stick9,
+    Bamboo9,
 
     /// <summary>
     /// 東風

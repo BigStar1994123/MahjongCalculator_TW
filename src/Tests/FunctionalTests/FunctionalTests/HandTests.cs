@@ -26,7 +26,7 @@ public class HandTests
         0b001001001000000000, // 37376
         0b001001001000000000000000000, // 19136512
         0b001001001001001001001)] // 299593
-    public void Test_Hand_Convert_Correct(int[] tiles, long exceptedCharacters, long exceptedDots, long exceptedSticks, long exceptedHonors)
+    public void Test_Hand_Convert_Correct(int[] tiles, long exceptedCharacters, long exceptedDots, long exceptedBamboos, long exceptedHonors)
     {
         // Arrange
         // Act
@@ -35,7 +35,7 @@ public class HandTests
         // Assert
         Assert.Equal(hand.Characters, exceptedCharacters);
         Assert.Equal(hand.Dots, exceptedDots);
-        Assert.Equal(hand.Sticks, exceptedSticks);
+        Assert.Equal(hand.Bamboo, exceptedBamboos);
         Assert.Equal(hand.Honors, exceptedHonors);
     }
 }
