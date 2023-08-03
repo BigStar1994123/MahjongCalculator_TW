@@ -7,172 +7,172 @@ public enum TileType
     /// <summary>
     /// 一萬
     /// </summary>
-    Character1,
+    Character1 = 0,
 
     /// <summary>
     /// 二萬
     /// </summary>
-    Character2,
+    Character2 = 1,
 
     /// <summary>
     /// 三萬
     /// </summary>
-    Character3,
+    Character3 = 2,
 
     /// <summary>
     /// 四萬
     /// </summary>
-    Character4,
+    Character4 = 3,
 
     /// <summary>
     /// 五萬
     /// </summary>
-    Character5,
+    Character5 = 4,
 
     /// <summary>
     /// 六萬
     /// </summary>
-    Character6,
+    Character6 = 5,
 
     /// <summary>
     /// 七萬
     /// </summary>
-    Character7,
+    Character7 = 6,
 
     /// <summary>
     /// 八萬
     /// </summary>
-    Character8,
+    Character8 = 7,
 
     /// <summary>
     /// 九萬
     /// </summary>
-    Character9,
+    Character9 = 8,
 
     /// <summary>
     /// 一筒
     /// </summary>
-    Dot1,
+    Dot1 = 9,
 
     /// <summary>
     /// 二筒
     /// </summary>
-    Dot2,
+    Dot2 = 10,
 
     /// <summary>
     /// 三筒
     /// </summary>
-    Dot3,
+    Dot3 = 11,
 
     /// <summary>
     /// 四筒
     /// </summary>
-    Dot4,
+    Dot4 = 12,
 
     /// <summary>
     /// 五筒
     /// </summary>
-    Dot5,
+    Dot5 = 13,
 
     /// <summary>
     /// 六筒
     /// </summary>
-    Dot6,
+    Dot6 = 14,
 
     /// <summary>
     /// 七筒
     /// </summary>
-    Dot7,
+    Dot7 = 15,
 
     /// <summary>
     /// 八筒
     /// </summary>
-    Dot8,
+    Dot8 = 16,
 
     /// <summary>
     /// 九筒
     /// </summary>
-    Dot9,
+    Dot9 = 17,
 
     /// <summary>
     /// 一條
     /// </summary>
-    Bamboo1,
+    Bamboos1 = 18,
 
     /// <summary>
     /// 二條
     /// </summary>
-    Bamboo2,
+    Bamboos2 = 19,
 
     /// <summary>
     /// 三條
     /// </summary>
-    Bamboo3,
+    Bamboos3 = 20,
 
     /// <summary>
     /// 四條
     /// </summary>
-    Bamboo4,
+    Bamboos4 = 21,
 
     /// <summary>
     /// 五條
     /// </summary>
-    Bamboo5,
+    Bamboos5 = 22,
 
     /// <summary>
     /// 六條
     /// </summary>
-    Bamboo6,
+    Bamboos6 = 23,
 
     /// <summary>
     /// 七條
     /// </summary>
-    Bamboo7,
+    Bamboos7 = 24,
 
     /// <summary>
     /// 八條
     /// </summary>
-    Bamboo8,
+    Bamboos8 = 25,
 
     /// <summary>
     /// 九條
     /// </summary>
-    Bamboo9,
+    Bamboos9 = 26,
 
     /// <summary>
     /// 東風
     /// </summary>
-    EastWind,
+    EastWind = 27,
 
     /// <summary>
     /// 南風
     /// </summary>
-    SouthWind,
+    SouthWind = 28,
 
     /// <summary>
     /// 西風
     /// </summary>
-    WestWind,
+    WestWind = 29,
 
     /// <summary>
     /// 北風
     /// </summary>
-    NorthWind,
+    NorthWind = 30,
 
     /// <summary>
     /// 白皮
     /// </summary>
-    WhiteDragon,
+    WhiteDragon = 31,
 
     /// <summary>
     /// 發財
     /// </summary>
-    GreenDragon,
+    GreenDragon = 32,
 
     /// <summary>
     /// 紅中
     /// </summary>
-    RedDragon,
+    RedDragon = 33,
 
     /// <summary>
     /// 梅
@@ -187,7 +187,7 @@ public enum TileType
     /// <summary>
     /// 竹
     /// </summary>
-    Bamboo,
+    BamboosHonor,
 
     /// <summary>
     /// 菊

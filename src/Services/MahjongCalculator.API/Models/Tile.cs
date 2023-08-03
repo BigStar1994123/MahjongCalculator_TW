@@ -9,52 +9,52 @@ public class Tile
 {
     public TileType Value { get; set; }
 
-    public SortedDictionary<TileType, string> Name = new()
-    {
-        { TileType.Null, "Null" },
-        { TileType.Character1, "一萬" },
-        { TileType.Character2, "二萬" },
-        { TileType.Character3, "三萬" },
-        { TileType.Character4, "四萬" },
-        { TileType.Character5, "五萬" },
-        { TileType.Character6, "六萬" },
-        { TileType.Character7, "七萬" },
-        { TileType.Character8, "八萬" },
-        { TileType.Character9, "九萬" },
-        { TileType.Dot1, "一筒" },
-        { TileType.Dot2, "二筒" },
-        { TileType.Dot3, "三筒" },
-        { TileType.Dot4, "四筒" },
-        { TileType.Dot5, "五筒" },
-        { TileType.Dot6, "六筒" },
-        { TileType.Dot7, "七筒" },
-        { TileType.Dot8, "八筒" },
-        { TileType.Dot9, "九筒" },
-        { TileType.Bamboo1, "一索" },
-        { TileType.Bamboo2, "二索" },
-        { TileType.Bamboo3, "三索" },
-        { TileType.Bamboo4, "四索" },
-        { TileType.Bamboo5, "五索" },
-        { TileType.Bamboo6, "六索" },
-        { TileType.Bamboo7, "七索" },
-        { TileType.Bamboo8, "八索" },
-        { TileType.Bamboo9, "九索" },
-        { TileType.EastWind, "東" },
-        { TileType.SouthWind, "南" },
-        { TileType.WestWind, "西" },
-        { TileType.NorthWind, "北" },
-        { TileType.WhiteDragon, "白" },
-        { TileType.GreenDragon, "發" },
-        { TileType.RedDragon, "中" },
-        { TileType.Plum, "梅" },
-        { TileType.Orchid, "蘭" },
-        { TileType.Bamboo, "竹" },
-        { TileType.Chrysanthemum, "菊" },
-        { TileType.Sprint, "春" },
-        { TileType.Summor, "夏" },
-        { TileType.Fall, "秋" },
-        { TileType.Winter, "東" }
-    };
+    //private SortedDictionary<TileType, string> Name = new()
+    //{
+    //    { TileType.Null, "Null" },
+    //    { TileType.Character1, "一萬" },
+    //    { TileType.Character2, "二萬" },
+    //    { TileType.Character3, "三萬" },
+    //    { TileType.Character4, "四萬" },
+    //    { TileType.Character5, "五萬" },
+    //    { TileType.Character6, "六萬" },
+    //    { TileType.Character7, "七萬" },
+    //    { TileType.Character8, "八萬" },
+    //    { TileType.Character9, "九萬" },
+    //    { TileType.Dot1, "一筒" },
+    //    { TileType.Dot2, "二筒" },
+    //    { TileType.Dot3, "三筒" },
+    //    { TileType.Dot4, "四筒" },
+    //    { TileType.Dot5, "五筒" },
+    //    { TileType.Dot6, "六筒" },
+    //    { TileType.Dot7, "七筒" },
+    //    { TileType.Dot8, "八筒" },
+    //    { TileType.Dot9, "九筒" },
+    //    { TileType.Bamboos1, "一索" },
+    //    { TileType.Bamboos2, "二索" },
+    //    { TileType.Bamboos3, "三索" },
+    //    { TileType.Bamboos4, "四索" },
+    //    { TileType.Bamboos5, "五索" },
+    //    { TileType.Bamboos6, "六索" },
+    //    { TileType.Bamboos7, "七索" },
+    //    { TileType.Bamboos8, "八索" },
+    //    { TileType.Bamboos9, "九索" },
+    //    { TileType.EastWind, "東" },
+    //    { TileType.SouthWind, "南" },
+    //    { TileType.WestWind, "西" },
+    //    { TileType.NorthWind, "北" },
+    //    { TileType.WhiteDragon, "白" },
+    //    { TileType.GreenDragon, "發" },
+    //    { TileType.RedDragon, "中" },
+    //    { TileType.Plum, "梅" },
+    //    { TileType.Orchid, "蘭" },
+    //    { TileType.Bamboos, "竹" },
+    //    { TileType.Chrysanthemum, "菊" },
+    //    { TileType.Sprint, "春" },
+    //    { TileType.Summor, "夏" },
+    //    { TileType.Fall, "秋" },
+    //    { TileType.Winter, "東" }
+    //};
 
     /// <summary>
     /// 是否為萬牌
@@ -78,9 +78,9 @@ public class Tile
     /// 是否為條牌
     /// </summary>
     /// <returns></returns>
-    public bool IsBamboo()
+    public bool IsBamboos()
     {
-        return this.Value >= TileType.Bamboo1 && this.Value <= TileType.Bamboo9;
+        return this.Value >= TileType.Bamboos1 && this.Value <= TileType.Bamboos9;
     }
 
     /// <summary>

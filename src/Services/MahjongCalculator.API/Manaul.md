@@ -1,7 +1,0 @@
-- turn: 現在進行的回合數
-- block: 已經成形的牌種類
-- hand: 完整的16張手牌
-- tile: 個別的牌
-- required_tiles
-  - count: 剩餘張數
-  - tile: 有效牌

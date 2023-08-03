@@ -24,4 +24,10 @@
     <ProjectReference Include="..\..\..\Services\MahjongCalculator.API\MahjongCalculator_TW.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="SyantenTestFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
