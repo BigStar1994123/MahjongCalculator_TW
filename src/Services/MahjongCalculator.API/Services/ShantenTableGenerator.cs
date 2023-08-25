@@ -1,4 +1,4 @@
-﻿namespace MahjongCalculator_TW;
+﻿namespace MahjongCalculator_TW.Services;
 
 public class ShantenTableGenerator
 {
@@ -169,7 +169,7 @@ public class ShantenTableGenerator
     {
         int combinationValue = setCount * 2 + partialSetCount;
 
-        if (combinationValue > _maxCombinationValue || (combinationValue == _maxCombinationValue && setCount > _maxSetCount))
+        if (combinationValue > _maxCombinationValue || combinationValue == _maxCombinationValue && setCount > _maxSetCount)
         {
             _maxCombinationValue = combinationValue;
             _maxSetCount = setCount;

@@ -1,7 +1,7 @@
 ﻿using MahjongCalculator_TW.Models;
 using MahjongCalculator_TW.src.Models;
 
-namespace MahjongCalculator_TW;
+namespace MahjongCalculator_TW.Services;
 
 public class ShantenCalculator
 {
@@ -107,7 +107,7 @@ public class ShantenCalculator
                 - _shantenSuitDic[hand.GetCharacterKey()].PartialSetCount
                 + _shantenSuitDic[hand.GetCharacterKey()].PartialSetWithHeadCount;
 
-            max = Math.Max(max, (setCount * 2) + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
+            max = Math.Max(max, setCount * 2 + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
         }
 
         if (_shantenSuitDic[hand.GetDotKey()].IsHeadExist)
@@ -122,7 +122,7 @@ public class ShantenCalculator
                 - _shantenSuitDic[hand.GetDotKey()].PartialSetCount
                 + _shantenSuitDic[hand.GetDotKey()].PartialSetWithHeadCount;
 
-            max = Math.Max(max, (setCount * 2) + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
+            max = Math.Max(max, setCount * 2 + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
         }
 
         if (_shantenSuitDic[hand.GetBamboosKey()].IsHeadExist)
@@ -137,7 +137,7 @@ public class ShantenCalculator
                 - _shantenSuitDic[hand.GetBamboosKey()].PartialSetCount
                 + _shantenSuitDic[hand.GetBamboosKey()].PartialSetWithHeadCount;
 
-            max = Math.Max(max, (setCount * 2) + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
+            max = Math.Max(max, setCount * 2 + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
         }
 
         if (_shantenHonorDic[hand.GetHonorKey()].IsHeadExist)
@@ -152,7 +152,7 @@ public class ShantenCalculator
                 - _shantenHonorDic[hand.GetHonorKey()].PartialSetCount
                 + _shantenHonorDic[hand.GetHonorKey()].PartialSetWithHeadCount;
 
-            max = Math.Max(max, (setCount * 2) + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
+            max = Math.Max(max, setCount * 2 + Math.Min(setCountTarget - setCount, partialSetCount) + 1);
         }
 
         return worstShanten - max;

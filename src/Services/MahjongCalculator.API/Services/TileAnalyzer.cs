@@ -1,6 +1,6 @@
 ﻿using MahjongCalculator_TW.src.Models.Enums;
 
-namespace MahjongCalculator_TW;
+namespace MahjongCalculator_TW.Services;
 
 public static class TileAnalyzer
 {
